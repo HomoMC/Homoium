@@ -24,6 +24,16 @@ public class Settings {
         public boolean optimizeMath = true;
     }
 
+    @Config.Comment("Bug fixes")
+    @Config.RequiresMcRestart
+    public static BugFix bugFix = new BugFix();
+    public static class BugFix {
+        @Config.Comment("Should we patch the Randar exploit?")
+        @Config.RequiresMcRestart
+        public boolean fixRandarExploit = true;
+    }
+
+
     @Config.Comment("Should we optimize entity movement?")
     @Config.RequiresMcRestart
     public static boolean optimizeEntityMovement = true;

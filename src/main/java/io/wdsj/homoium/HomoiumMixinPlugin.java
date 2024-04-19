@@ -58,6 +58,10 @@ public class HomoiumMixinPlugin implements IMixinConfigPlugin {
                 if (!Settings.hibernateWhenNoPlayersOnline) {
                     return false;
                 }
+            case "io.wdsj.homoium.mixin.world.MixinWorldA":
+                if (!Settings.bugFix.fixRandarExploit) {
+                    return false;
+                }
         }
         return true;
     }
