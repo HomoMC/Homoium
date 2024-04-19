@@ -1,0 +1,20 @@
+{
+    "compatibilityLevel": "JAVA_8",
+    "package": "io.wdsj.homoium.mixin",
+    "refmap": "refmap.homoium.json",
+    "plugin": "io.wdsj.homoium.HomoiumMixinPlugin",
+    "minVersion": "0.8",
+    "mixins": [
+        "ai.pathfinding.MixinChunkCache",
+        "entity.ticking.AccessorEntity",
+        "entity.ticking.MixinEntity",
+        "entity.ticking.MixinEntityMinecart",
+        "entity.ticking.MixinEntityPlayerMP",
+        "math.AccessorMathHelper",
+        "math.MixinMathHelper",
+        "tileentity.ticking.MixinTileEntityEndGateway",
+        "world.MixinWorld"
+    ],
+    "client": [],
+    "server": []
+}
