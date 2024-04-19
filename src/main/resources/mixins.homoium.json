@@ -13,9 +13,10 @@
         "math.AccessorMathHelper",
         "math.MixinMathHelper",
         "tileentity.ticking.MixinTileEntityEndGateway",
-        "world.MixinWorld",
-        "world.MixinWorldServer"
+        "world.MixinWorld"
     ],
     "client": [],
-    "server": []
+    "server": [
+        "world.MixinWorldServer"
+    ]
 }
