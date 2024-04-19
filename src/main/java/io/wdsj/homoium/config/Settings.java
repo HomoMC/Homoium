@@ -36,6 +36,10 @@ public class Settings {
     @Config.RequiresMcRestart
     public static boolean dontTickFrostWalkForDeadPlayers = true;
 
+    @Config.Comment("Hibernate server when no players online?")
+    @Config.RequiresMcRestart
+    public static boolean hibernateWhenNoPlayersOnline = true;
+
     @Config.Comment("Don't tick end gateway in other dimension")
     @Config.RequiresMcRestart
     public static boolean dontTickEndGatewayForNonEnd = true;

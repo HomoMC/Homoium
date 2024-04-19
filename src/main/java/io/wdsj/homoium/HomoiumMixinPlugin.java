@@ -53,6 +53,11 @@ public class HomoiumMixinPlugin implements IMixinConfigPlugin {
                 if (!Settings.lithiumOptimization.optimizeMath) {
                     return false;
                 }
+                break;
+            case "io.wdsj.homoium.mixin.world.MixinWorldServer":
+                if (!Settings.hibernateWhenNoPlayersOnline) {
+                    return false;
+                }
         }
         return true;
     }
