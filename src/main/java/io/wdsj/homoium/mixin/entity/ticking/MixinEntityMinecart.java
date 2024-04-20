@@ -12,7 +12,7 @@ public abstract class MixinEntityMinecart {
 
     @Inject(method = "onUpdate", at = @At(value = "INVOKE", target = "Lnet/minecraft/entity/item/EntityMinecart;canBeRidden()Z", shift = At.Shift.BEFORE) ,cancellable = true)
     public void onUpdate(CallbackInfo ci) {
-        if (((AccessorEntity) this).getTicksExisted() % Settings.minecartSkipTicks == 0) {
+        if (((AccessorEntity) this).getTicksExisted() % Settings.minecartSkipTicks != 0) {
             ci.cancel();
         }
     }
