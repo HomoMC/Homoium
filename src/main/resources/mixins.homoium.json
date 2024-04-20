@@ -1,23 +1,25 @@
 {
-  "compatibilityLevel": "JAVA_8",
-  "package": "io.wdsj.homoium.mixin",
-  "refmap": "refmap.homoium.json",
-  "plugin": "io.wdsj.homoium.HomoiumMixinPlugin",
-  "minVersion": "0.8",
-  "mixins": [
-    "ai.pathfinding.MixinChunkCache",
-    "entity.ticking.AccessorEntity",
-    "entity.ticking.MixinEntity",
-    "entity.ticking.MixinEntityMinecart",
-    "entity.ticking.MixinEntityPlayerMP",
-    "math.AccessorMathHelper",
-    "math.MixinMathHelper",
-    "tileentity.ticking.MixinTileEntityEndGateway",
-    "world.MixinWorld",
-    "world.MixinWorldA"
-  ],
-  "client": [],
-  "server": [
-    "world.MixinWorldServer"
-  ]
+	"package": "io.wdsj.homoium.mixin",
+	"required": true,
+	"refmap": "${mixin_refmap}",
+	"target": "@env(DEFAULT)",
+	"minVersion": "0.8",
+	"plugin": "io.wdsj.homoium.HomoiumMixinPlugin",
+	"compatibilityLevel": "JAVA_8",
+	"mixins": [
+		"ai.pathfinding.MixinChunkCache",
+		"entity.ticking.AccessorEntity",
+		"entity.ticking.MixinEntity",
+		"entity.ticking.MixinEntityMinecart",
+		"entity.ticking.MixinEntityPlayerMP",
+		"math.AccessorMathHelper",
+		"math.MixinMathHelper",
+		"tileentity.ticking.MixinTileEntityEndGateway",
+		"world.MixinWorld",
+		"world.MixinWorldA"
+	],
+	"server": [
+		"world.MixinWorldServer"
+	],
+	"client": []
 }
