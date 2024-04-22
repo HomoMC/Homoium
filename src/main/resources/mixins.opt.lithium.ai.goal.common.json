@@ -6,6 +6,6 @@
   "minVersion": "0.8",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
-    "bugfix.randar.MixinWorldA"
+    "ai.goal.MixinEntityAITasks"
   ]
 }

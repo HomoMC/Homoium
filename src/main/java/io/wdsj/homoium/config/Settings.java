@@ -22,6 +22,10 @@ public class Settings {
         @Config.Comment("Should we optimize math?")
         @Config.RequiresMcRestart
         public boolean optimizeMath = true;
+
+        @Config.Comment("Should we optimize ai goal?")
+        @Config.RequiresMcRestart
+        public boolean optimizeAiGoal = true;
     }
 
     @Config.Comment("Bug fixes")

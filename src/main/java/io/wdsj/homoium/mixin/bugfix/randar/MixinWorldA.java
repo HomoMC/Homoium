@@ -1,4 +1,4 @@
-package io.wdsj.homoium.mixin.world;
+package io.wdsj.homoium.mixin.bugfix.randar;
 
 import net.minecraft.world.World;
 import net.minecraft.world.storage.WorldInfo;
