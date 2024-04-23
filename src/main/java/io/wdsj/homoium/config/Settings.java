@@ -1,5 +1,6 @@
 package io.wdsj.homoium.config;
 
+import com.cleanroommc.configanytime.ConfigAnytime;
 import io.wdsj.homoium.Homoium;
 import net.minecraftforge.common.config.Config;
 
@@ -33,15 +34,6 @@ public class Settings {
         @Config.RequiresMcRestart
         public boolean fixRandarExploit = true;
     }
-    @Config.Comment("Experimental features")
-    @Config.RequiresMcRestart
-    public static Experimental experimental = new Experimental();
-
-    public static class Experimental {
-        @Config.Comment("Should we enable dynamic view distance?")
-        @Config.RequiresMcRestart
-        public boolean dynamicViewDistance = false;
-    }
 
     @Config.Comment("Should we optimize entity movement?")
     @Config.RequiresMcRestart
@@ -62,4 +54,8 @@ public class Settings {
     @Config.Comment("Don't tick end gateway in other dimension")
     @Config.RequiresMcRestart
     public static boolean dontTickEndGatewayForNonEnd = true;
+
+    static {
+        ConfigAnytime.register(Settings.class);
+    }
 }

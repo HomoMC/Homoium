@@ -18,7 +18,6 @@ public class HomoiumPlugin implements IFMLLoadingPlugin, IEarlyMixinLoader {
     {
         {
             put("mixins.opt.hibernate.server.json", () -> Settings.hibernateWhenNoPlayersOnline);
-            put("mixins.opt.dynamic.view.server.json", () -> Settings.experimental.dynamicViewDistance);
         }
     });
 
