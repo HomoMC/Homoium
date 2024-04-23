@@ -36,7 +36,15 @@ public class Settings {
         @Config.RequiresMcRestart
         public boolean fixRandarExploit = true;
     }
+    @Config.Comment("Experimental features")
+    @Config.RequiresMcRestart
+    public static Experimental experimental = new Experimental();
 
+    public static class Experimental {
+        @Config.Comment("Should we enable dynamic view distance?")
+        @Config.RequiresMcRestart
+        public boolean dynamicViewDistance = false;
+    }
 
     @Config.Comment("Should we optimize entity movement?")
     @Config.RequiresMcRestart
