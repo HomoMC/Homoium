@@ -30,6 +30,7 @@ public class HomoiumPlugin implements IFMLLoadingPlugin, IEarlyMixinLoader {
             put("mixins.opt.entity.movement.common.json", () -> Settings.optimizeEntityMovement);
             put("mixins.opt.minecart.collision.common.json", () -> Settings.optimizeMinecartCollision);
             put("mixins.opt.entity.frostwalk.common.json", () -> Settings.dontTickFrostWalkForDeadPlayers);
+            put("mixins.opt.block.physics.common.json", () -> Settings.preventBlockPhysicsLoadChunk);
             put("mixins.opt.tile.endgateway.common.json", () -> Settings.dontTickEndGatewayForNonEnd);
             put("mixins.bugfix.randar.common.json", () -> Settings.bugFix.fixRandarExploit);
             put("mixins.opt.lithium.ai.goal.common.json", () -> Settings.lithiumOptimization.optimizeAiGoal);
