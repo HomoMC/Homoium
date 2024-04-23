@@ -25,7 +25,6 @@ public class HomoiumPlugin implements IFMLLoadingPlugin, IEarlyMixinLoader {
     private static final Map<String, Supplier<Boolean>> commonSideMixinConfigs = ImmutableMap.copyOf(new HashMap<String, Supplier<Boolean>>()
     {
         {
-            put("mixins.opt.lithium.chunkcache.common.json", () -> Settings.lithiumOptimization.optimizeChunkCache);
             put("mixins.opt.lithium.math.common.json", () -> Settings.lithiumOptimization.optimizeMath);
             put("mixins.opt.entity.movement.common.json", () -> Settings.optimizeEntityMovement);
             put("mixins.opt.minecart.collision.common.json", () -> Settings.optimizeMinecartCollision);
