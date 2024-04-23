@@ -47,7 +47,13 @@ public class HomoiumPlugin implements IFMLLoadingPlugin, IEarlyMixinLoader {
     public boolean shouldMixinConfigQueue(String mixinConfig) {
         Supplier<Boolean> sidedSupplier = isClient ? null : serversideMixinConfigs.get(mixinConfig);
         Supplier<Boolean> commonSupplier = commonSideMixinConfigs.get(mixinConfig);
-        return sidedSupplier != null ? sidedSupplier.get() : commonSupplier == null || commonSupplier.get();
+        if (sidedSupplier != null) {
+            return sidedSupplier.get();
+        }
+        if (commonSupplier != null) {
+            return commonSupplier.get();
+        }
+        return true;
     }
 
     @Override

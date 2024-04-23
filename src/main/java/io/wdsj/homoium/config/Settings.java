@@ -16,9 +16,6 @@ public class Settings {
     @Config.RequiresMcRestart
     public static Lithium lithiumOptimization = new Lithium();
     public static class Lithium {
-        @Config.Comment("Should we optimize chunk cache?")
-        @Config.RequiresMcRestart
-        public boolean optimizeChunkCache = true;
         @Config.Comment("Should we optimize math?")
         @Config.RequiresMcRestart
         public boolean optimizeMath = true;
