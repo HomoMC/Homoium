@@ -33,6 +33,7 @@ public class HomoiumPlugin implements IFMLLoadingPlugin, IEarlyMixinLoader {
             put("mixins.opt.tile.endgateway.common.json", () -> Settings.dontTickEndGatewayForNonEnd);
             put("mixins.bugfix.randar.common.json", () -> Settings.bugFix.fixRandarExploit);
             put("mixins.opt.lithium.ai.goal.common.json", () -> Settings.lithiumOptimization.optimizeAiGoal);
+            put("mixins.misc.prevent.teleport.dead.players.common.json", () -> Settings.miscellaneous.preventTeleportDeadPlayers);
         }
     });
     @Override

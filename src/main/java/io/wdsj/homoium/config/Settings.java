@@ -43,6 +43,10 @@ public class Settings {
         @Config.Comment("Should we use lag compensate eating?")
         @Config.RequiresMcRestart
         public boolean lagCompensateEating = false;
+
+        @Config.Comment("Should we prevent teleport dead players?")
+        @Config.RequiresMcRestart
+        public boolean preventTeleportDeadPlayers = false;
     }
 
     @Config.Comment("Should we optimize entity movement?")
