@@ -18,6 +18,7 @@ public class HomoiumPlugin implements IFMLLoadingPlugin, IEarlyMixinLoader {
     {
         {
             put("mixins.opt.hibernate.server.json", () -> Settings.hibernateWhenNoPlayersOnline);
+            put("mixins.misc.lag.compensate.eating.server.json", () -> Settings.miscellaneous.lagCompensateEating);
         }
     });
 

@@ -35,6 +35,16 @@ public class Settings {
         public boolean fixRandarExploit = true;
     }
 
+    @Config.Comment("Misc features")
+    @Config.RequiresMcRestart
+    public static Misc miscellaneous = new Misc();
+
+    public static class Misc {
+        @Config.Comment("Should we use lag compensate eating?")
+        @Config.RequiresMcRestart
+        public boolean lagCompensateEating = false;
+    }
+
     @Config.Comment("Should we optimize entity movement?")
     @Config.RequiresMcRestart
     public static boolean optimizeEntityMovement = true;
