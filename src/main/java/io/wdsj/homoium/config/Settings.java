@@ -16,7 +16,7 @@ public class Settings {
 
     @Config.Comment("Should we cache random ticks?")
     @Config.RequiresMcRestart
-    public static boolean cacheRandomTicks = true;
+    public static boolean cacheRandomTicks = false;
 
     @Config.Comment("Lithium optimizations")
     @Config.RequiresMcRestart
