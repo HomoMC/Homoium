@@ -10,8 +10,13 @@ public class Settings {
     @Config.RequiresMcRestart
     public static boolean optimizeMinecartCollision = true;
 
+    @Config.Comment("How many minecart ticks should we skip?")
     @Config.RequiresMcRestart
     public static int minecartSkipTicks = 30;
+
+    @Config.Comment("Should we cache random ticks?")
+    @Config.RequiresMcRestart
+    public static boolean cacheRandomTicks = true;
 
     @Config.Comment("Lithium optimizations")
     @Config.RequiresMcRestart
