@@ -28,9 +28,17 @@ public class Settings {
 
         @Config.Comment("Should we optimize ai goal?")
         @Config.RequiresMcRestart
-        public boolean optimizeAiGoal = true;
+        public boolean optimizeAiGoal = false;
     }
 
+    @Config.Comment("Carpet optimizations")
+    public static Carpet carpetOptimization = new Carpet();
+
+    public static class Carpet {
+        @Config.Comment("Should we optimize math?")
+        @Config.RequiresMcRestart
+        public boolean carpetOptimizeMath = true;
+    }
     @Config.Comment("Bug fixes")
     @Config.RequiresMcRestart
     public static BugFix bugFix = new BugFix();
