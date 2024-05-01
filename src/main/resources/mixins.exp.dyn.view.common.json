@@ -1,0 +1,16 @@
+{
+  "package": "io.wdsj.homoium.mixin",
+  "required": true,
+  "refmap": "mixins.homoium.refmap.json",
+  "target": "@env(DEFAULT)",
+  "minVersion": "0.8",
+  "compatibilityLevel": "JAVA_8",
+  "mixins": [
+    "experimental.AccessorCPacketClientSettings",
+    "experimental.AccessorEntityPlayerMP",
+    "experimental.AccessorPlayerChunkMap",
+    "experimental.MixinEntityPlayerMP",
+    "experimental.MixinEntityTrackerEntry",
+    "experimental.MixinPlayerChunkMap"
+  ]
+}

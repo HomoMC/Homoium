@@ -62,6 +62,18 @@ public class Settings {
         public boolean preventTeleportDeadPlayers = false;
     }
 
+
+    @Config.Comment("Experimental features")
+    @Config.RequiresMcRestart
+    public static Experimental experimental = new Experimental();
+
+    public static class Experimental {
+        @Config.Comment("Dynamic view distance")
+        @Config.RequiresMcRestart
+        public boolean dynamicViewDistance = false;
+
+    }
+
     @Config.Comment("Should we optimize entity movement?")
     @Config.RequiresMcRestart
     public static boolean optimizeEntityMovement = true;

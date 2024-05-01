@@ -36,6 +36,7 @@ public class HomoiumPlugin implements IFMLLoadingPlugin, IEarlyMixinLoader {
             put("mixins.misc.prevent.teleport.dead.players.common.json", () -> Settings.miscellaneous.preventTeleportDeadPlayers);
             put("mixins.opt.cache.random.ticks.common.json", () -> Settings.cacheRandomTicks);
             put("mixins.opt.carpet.math.common.json", () -> Settings.carpetOptimization.carpetOptimizeMath);
+            put("mixins.exp.dyn.view.common.json", () -> Settings.experimental.dynamicViewDistance);
         }
     });
     @Override
