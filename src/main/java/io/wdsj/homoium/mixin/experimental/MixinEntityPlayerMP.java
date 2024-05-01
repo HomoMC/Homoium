@@ -56,6 +56,7 @@ public abstract class MixinEntityPlayerMP extends EntityPlayer implements IConta
             this.homoium_RFG$clientsideViewDistance = ((AccessorCPacketClientSettings)pkt).getViewDistance();
             int distance = Math.min(homoium_RFG$clientsideViewDistance, ((AccessorPlayerChunkMap)((WorldServer)world).getPlayerChunkMap()).getPlayerViewRadius());
             ((IPlayerChunkMapMethods)((WorldServer) world).getPlayerChunkMap()).homoium_RFG$updateViewDistance(((EntityPlayerMP)(Object)this), distance);
+            ((WorldServer) world).getEntityTracker().untrack(this);
             ((WorldServer) world).getEntityTracker().track(this); // Update entity tracker
         }
     }
