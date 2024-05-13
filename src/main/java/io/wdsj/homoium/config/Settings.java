@@ -88,7 +88,7 @@ public class Settings {
 
     @Config.Comment("Hibernate server when no players online?")
     @Config.RequiresMcRestart
-    public static boolean hibernateWhenNoPlayersOnline = true;
+    public static boolean hibernateWhenNoPlayersOnline = false;
 
     @Config.Comment("Don't tick end gateway in other dimension")
     @Config.RequiresMcRestart
