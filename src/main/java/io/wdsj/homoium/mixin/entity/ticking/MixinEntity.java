@@ -1,7 +1,8 @@
 package io.wdsj.homoium.mixin.entity.ticking;
 
-
+import io.wdsj.homoium.Homoium;
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.EntityList;
 import net.minecraft.entity.MoverType;
 import net.minecraft.util.math.AxisAlignedBB;
 import org.spongepowered.asm.mixin.Mixin;
@@ -29,6 +30,11 @@ public abstract class MixinEntity {
 
     @Inject(method = "setEntityBoundingBox", at = @At("HEAD"))
     public void checkBeforeSetAABB(AxisAlignedBB bb, CallbackInfo ci) {
+        if(this.boundingBox == null)
+        {
+            Homoium.LOGGER.warn("ATTENTION, ENTITY " + EntityList.getEntityString((Entity)(Object)this) + " has no AABB contact the mod owner about this.");
+            return;
+        }
         if (!this.boundingBox.equals(bb)) homoium$isBoundingBoxChanged = true;
     }
 
