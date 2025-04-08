@@ -32,7 +32,6 @@ public abstract class MixinEntity {
     public void checkBeforeSetAABB(AxisAlignedBB bb, CallbackInfo ci) {
         if(this.boundingBox == null)
         {
-            Homoium.LOGGER.warn("ATTENTION, ENTITY " + EntityList.getEntityString((Entity)(Object)this) + " has no AABB contact the mod owner about this.");
             return;
         }
         if (!this.boundingBox.equals(bb)) homoium$isBoundingBoxChanged = true;
